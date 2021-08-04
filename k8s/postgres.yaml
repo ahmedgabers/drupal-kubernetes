@@ -35,6 +35,11 @@ metadata:
   labels:
     app: drupal
 spec:
+  selector:
+    matchLabels:
+      app: drupal
+      tier: postgreSQL
+
   strategy:
     type: Recreate
   template:
